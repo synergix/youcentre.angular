@@ -1,0 +1,63 @@
+<br>
+
+
+<div class="container">
+
+<p>Cliquer sur langage pour ajouter à la liste de 'Je veux apprendre'</p>
+<br>
+
+
+  <div class="row">
+
+    <!-- Liste de cours -->
+    <div class="col-md-6">
+
+        <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Langages Programmation </h4>
+        </div>
+        
+        <div class="panel-body">
+              <ul *ngFor="let langage of langages let i=index">
+                <li (click)="ajouterAListe(i)">{{langage}}</li>
+             </ul>          
+        </div>
+
+      </div>
+
+    </div>
+
+     <!-- Je veux apprendre -->
+     <div class="col-md-6">
+
+        <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Je veux apprendre </h4>
+        </div>
+        
+        <div class="panel-body">
+              <ul *ngFor="let selectionne of langagesSelectionnes let j=index" >
+               
+                <li (click)="retirerListe(j)">
+                  {{selectionne}}
+                </li>      
+            </ul>    
+            
+            <!-- si liste vide -->
+            <div *ngIf="langagesSelectionnes.length==0">  
+              La liste est vide la taille est zéro
+            </div>    
+        </div>
+      </div>
+
+    </div>
+
+  </div> <!-- row -->
+
+</div>
+
+
+
+
+ 
+
