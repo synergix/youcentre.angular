@@ -14,10 +14,11 @@ export class AppFormulaireComponent {
     todoDesc: string;
     nouveauTodo: string;
     ajouterNouveauTodo(texte: string, desc: string, date: Date, priority: string) {
+
         this.todos.push({ texte: texte, desc: desc, date: date, estFait: false, priority: priority })
-       this.reinitialiserTodo();
+        this.reinitialiserTodo();
     }
-    reinitialiserTodo(){
+    reinitialiserTodo() {
         this.priority = 'Faible';
         this.todoDate = null;
         this.todoDesc = '';

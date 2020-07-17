@@ -24,7 +24,7 @@
             </div>
         </div>
         <br>
-        <button (click)="ajouterNouveauTodo(nouveauTodo,todoDesc,todoDate,priority)"> Ajouter</button>
+        <button (click)="ajouterNouveauTodo(nouveauTodo,todoDesc,todoDate,priority)" [disabled]="!nouveauTodo || !todoDate ||!todoDesc"> Ajouter</button>
     </div>
     
 </div>
