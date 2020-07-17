@@ -19,8 +19,8 @@
 
   <tr *ngFor="let livre of livres let i=index" >
     <td width="20">{{i + 1}}</td>
-    <td >{{livre.nom }}</td>
-    <td  width="30"> {{livre.prix}}</td>
+    <td >{{livre.nom | uppercase}}</td>
+    <td  width="30"> {{livre.prix | currency: 'EUR':true}}</td>
   
     <td  width="10"><span (click)="supprimerListe(i)" style="text-align:center"> ❌</span></td>
 
@@ -28,7 +28,7 @@
   <tr>
     <td></td>
     <td style="text-align:right">Total : </td>
-    <td></td>
+    <td>{{calculerTotal() | currency : 'EUR':true}} </td>
     <td></td>
   </tr>
 

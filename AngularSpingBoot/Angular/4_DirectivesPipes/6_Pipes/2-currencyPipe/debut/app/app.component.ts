@@ -38,7 +38,7 @@ export class AppComponent {
      
     let sum:number = 0;
 
-    for (var i = 0; i < this.livres.length - 1; i++) {
+    for (var i = 0; i <this.livres.length ; i++) {
         
         let price = this.livres[i].prix;
         sum = sum + price;

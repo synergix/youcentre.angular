@@ -1,0 +1,30 @@
+<div class="row">
+
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-5">
+                <input type="text" placeholder="todo..." class="form-control" [(ngModel)]="nouveauTodo"
+                    name="nouveauTodo">
+            </div>
+            <div class="col-md-5">
+                <input type="date" class="form-control input-sm" [(ngModel)]="todoDate" name="todoDate">
+            </div>
+            <div class="col-md-2">
+                <select class="form-control input-sm" [(ngModel)]="priority" required>
+                    <option *ngFor="let p of priorities" [value]="p">{{p}}</option>
+                </select>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <textarea rows="3" class="area" [(ngModel)]="todoDesc" name="todoDesc"></textarea>
+
+            </div>
+        </div>
+        <br>
+        <button (click)="ajouterNouveauTodo(nouveauTodo,todoDesc,todoDate,priority)"> Ajouter</button>
+    </div>
+    
+</div>

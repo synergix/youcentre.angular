@@ -1,0 +1,34 @@
+body {
+	padding-top : 100px;	
+}
+h2 {color: #333}
+
+
+.well {
+  background: rgba(189, 195, 199,0.1)
+}
+
+.delete-icon {
+	cursor: cell;
+}
+
+.faible {
+	background: transparent;
+}
+
+.moyenne {
+	background: rgba(255, 255, 0, 0.1);
+}
+
+.haute {
+	background: rgba(255, 0, 0, 0.1);;
+}
+.area{
+
+	margin: 0px 135px 0px 0px; width: 622px; height: 222px;
+}
+.estFait{
+	background: rgba(0, 0, 0,0.1);
+	text-decoration: line-through;
+	color:#ccc;
+}
